@@ -1,0 +1,40 @@
+firemorey:
+  pic:
+    url: 127.0.0.1:8080
+    path: D:/tmp/img/
+
+server:
+  servlet:
+    context-path: /
+  port: 8080
+  tomcat:
+    max-http-post-size: 10000000
+
+#logback自定义路径配置
+logback:
+  logdir: D:/firemorey/log
+  appname: ChinaNo1
+#mybatis-plus相关配置
+mybatis-plus:
+  mapper-locations: classpath*:mappers/*.xml
+  global-config:
+    db-config:
+      logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+      logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+
+#多数据源配置
+spring:
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      datasource:
+        master:
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/firemorey?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8
+        sqlve:
+          username: root
+          password: root
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/firemorey?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&serverTimezone=GMT%2B8

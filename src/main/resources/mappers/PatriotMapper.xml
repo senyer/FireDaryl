@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.firemorey.mapper.PatriotMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.firemorey.domain.Patriot">
+        <id column="id" property="id" />
+        <result column="signed_picture" property="signedPicture" />
+        <result column="terminal_device" property="terminalDevice" />
+        <result column="user_agent" property="userAgent" />
+        <result column="ip" property="ip" />
+        <result column="ip_info" property="ipInfo" />
+        <result column="user_name" property="userName" />
+        <result column="time" property="time" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, signed_picture, terminal_device, user_agent, ip, ip_info, user_name, time
+    </sql>
+
+</mapper>
