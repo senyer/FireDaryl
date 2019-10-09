@@ -40,7 +40,7 @@ public class SwaggerConfig {
   private ApiInfo apiWebInfo() {
     return new ApiInfoBuilder()
             .title("China No.1")
-            .description("后端接口文档")
+            .description("在线签名后端接口文档")
             .version(VERSION)
             .build();
   }

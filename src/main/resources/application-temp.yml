@@ -1,7 +1,7 @@
 firemorey:
   pic:
     url: http://senyer.club
-    path: /var/firemorey/img/
+    path: /usr/local/src/project/szx-web/back-end/img/
 
 server:
   servlet:

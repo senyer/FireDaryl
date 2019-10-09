@@ -34,6 +34,7 @@ public class BaseController {
   /**
    * 返回成功+数据
    */
+  @SuppressWarnings("unchecked")
   public R success(Object object) {
     return new R(Msg.SUCCESS, object);
   }
@@ -41,6 +42,7 @@ public class BaseController {
   /**
    * 返回成功消息
    */
+  @SuppressWarnings("unchecked")
   public R success(String message) {
     return new R(Msg.SUCCESS, message);
   }
@@ -62,6 +64,7 @@ public class BaseController {
   /**
    * 返回枚举错误信息
    */
+  @SuppressWarnings("unchecked")
   public R error(Msg msg, String message) {
     return new R(msg, message);
   }

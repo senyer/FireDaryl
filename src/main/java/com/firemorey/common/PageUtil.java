@@ -14,12 +14,12 @@ public class PageUtil {
 
     /**
      * Mybatis-Plus分页封装
-     * @param page
-     * @return
+     * @param page x
+     * @return x
      */
     public static Page initMpPage(PageVo page){
 
-        Page p = null;
+        Page p ;
         int pageNumber = page.getPageNum();
         int pageSize = page.getPageSize();
         String sort = page.getSort();
@@ -32,10 +32,8 @@ public class PageUtil {
             pageSize = 10;
         }
         if(StrUtil.isNotBlank(sort)) {
-            Boolean isAsc = false;
-            if(StrUtil.isBlank(order)) {
-                isAsc = false;
-            } else {
+            boolean isAsc = false;
+            if(!StrUtil.isBlank(order)) {
                 if("desc".equals(order.toLowerCase())){
                     isAsc = false;
                 } else if("asc".equals(order.toLowerCase())){
@@ -56,9 +54,9 @@ public class PageUtil {
 
     /**
      * List 分页
-     * @param page
-     * @param list
-     * @return
+     * @param page x
+     * @param list x
+     * @return x
      */
     public static List listToPage(PageVo page, List list) {
 
